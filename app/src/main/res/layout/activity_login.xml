@@ -53,9 +53,8 @@
         android:id="@+id/button_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:background="@color/terracota"
-        android:foregroundTint="#AD5B5E"
+        android:layout_marginTop="60dp"
+        android:background="#AD5B5E"
         android:text="Login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -70,7 +69,7 @@
         android:clickable="true"
         android:focusable="true"
         android:text="Cadastre-se"
-        android:textColor="@android:color/holo_blue_dark"
+        android:textColor="@color/terracota"
         android:textColorHint="#AD5B5E"
         android:textColorLink="#AD5B5E"
         app:layout_constraintEnd_toEndOf="parent"
@@ -90,4 +89,5 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.505"
         app:srcCompat="@drawable/app_icon_foreground" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
