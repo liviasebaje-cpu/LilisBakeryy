@@ -61,7 +61,7 @@ class HomeFragment : Fragment() {
     }
 
     fun carregarItensMarketplace(container: LinearLayout) {
-        val databaseRef = FirebaseDatabase.getInstance().getReference("itens")
+        val databaseRef = FirebaseDatabase.getInstance().getReference("produtos")
 
         databaseRef.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
@@ -75,9 +75,15 @@ class HomeFragment : Fragment() {
                             .inflate(R.layout.item_template, container, false)
 
                         val imageView = itemView.findViewById<ImageView>(R.id.item_image)
-                        val enderecoView = itemView.findViewById<TextView>(R.id.item_endereco)
+                        val nomeItemView = itemView.findViewById<TextView>(R.id.item_nomeItem)
+                        val descricaoItemView = itemView.findViewById<TextView>(R.id.item_descricaoItem)
+                        val precoItemView = itemView.findViewById<TextView>(R.id.item_precoItem)
 
-                        enderecoView.text = "Endereço: ${item.endereco ?: "Não informado"}"
+                        descricaoItemView.text = "descricaoItem: ${item.descricaoItem ?: "Não informado"}"
+                        precoItemView.text = "descricaoItem: ${item.precoItem ?: "Não informado"}"
+                        nomeItemView.text = "nomeItem: ${item.nomeItem ?: "Não informado"}"
+
+
 
                         if (!item.imageUrl.isNullOrEmpty()) {
                             Glide.with(container.context).load(item.imageUrl).into(imageView)
