@@ -1,21 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F4F1E7"
     tools:context=".ui.dashboard.DashboardFragment">
 
+
+    <EditText
+        android:id="@+id/precoItemEditText"
+        android:layout_width="407dp"
+        android:layout_height="51dp"
+        android:layout_marginBottom="24dp"
+        android:ems="10"
+        android:hint="Preço"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/salvarItemButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/text_dashboard"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
+        android:fontFamily="@font/abril_fatface"
+        android:text="Cadastro de Produtos"
         android:textAlignment="center"
+        android:textColor="#B26668"
         android:textSize="20sp"
-        android:text="Cadastro de ..."
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -45,24 +59,39 @@
 
 
     <EditText
-        android:id="@+id/enderecoItemEditText"
+        android:id="@+id/nomeItemEditText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Endereço"
         android:height="48dp"
+        android:hint="Nome"
+        app:layout_constraintBottom_toTopOf="@+id/descricaoItemEditText"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/button_select_image" />
-
+        app:layout_constraintTop_toBottomOf="@id/button_select_image"
+        app:layout_constraintVertical_bias="0.531" />
 
     <Button
         android:id="@+id/salvarItemButton"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginBottom="228dp"
         android:text="Salvar"
-        app:layout_constraintTop_toBottomOf="@id/enderecoItemEditText"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/descricaoItemEditText"
+        android:layout_width="407dp"
+        android:layout_height="49dp"
+        android:layout_marginBottom="12dp"
+        android:ems="10"
+        android:hint="Descrição "
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/precoItemEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
